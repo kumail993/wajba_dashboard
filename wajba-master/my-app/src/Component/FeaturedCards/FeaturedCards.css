@@ -1,0 +1,113 @@
+.featured{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    box-sizing: border-box;
+}
+.featuredItem-1{
+    flex: 1;
+    text-align: center;
+    margin: 0px 20px;
+    padding: 30px;
+    border-radius: 5px;
+    -webkit-box-shadow: 5px 5px 9px 5px #000000; 
+box-shadow: 0px 0px 15px -10px rgba(0,0,0,75);
+background-color: #FF8B64;
+
+
+}
+.featuredItem-2{
+ flex: 1;
+ text-align: center;
+    margin: 0px 20px;
+    padding: 30px;
+    border-radius: 5px;
+    -webkit-box-shadow: 5px 5px 9px 5px #000000; 
+box-shadow: 0px 0px 15px -10px rgba(0,0,0,75);
+background-color:#E66E85;
+}
+.featuredItem-3{
+ flex: 1;
+ text-align: center;
+    margin: 0px 20px;
+    padding: 30px;
+    border-radius: 5px;
+    -webkit-box-shadow: 5px 5px 9px 5px #000000; 
+box-shadow: 0px 0px 15px -10px rgba(0,0,0,75);
+background-color: #0CC991;
+}
+.featuredItem-4{
+    text-align: center;
+     flex: 1;
+    margin: 0px 20px;
+    padding: 30px;
+    border-radius: 5px;
+    -webkit-box-shadow: 5px 5px 9px 5px #000000; 
+box-shadow: 0px 0px 15px -10px rgba(0,0,0,75);
+background-color: #A36FF7;
+}
+.featuredItem-5{
+    text-align: center;
+     flex: 1;
+    margin: 0px 20px;
+    padding: 30px;
+    border-radius: 5px;
+    -webkit-box-shadow: 5px 5px 9px 5px #000000; 
+box-shadow: 0px 0px 15px -10px rgba(0,0,0,75);
+background-color:#4886FF;
+
+}
+.FeaturedmoneyContainer{
+    text-align: center;
+    color: white;
+    font-weight: 30px; 
+    font-family: 'Alegreya Sans', sans-serif; 
+}
+.featuredTitle{
+   color: rgb(255, 255, 255);
+   
+    font-family: 'Alegreya Sans', sans-serif; 
+}
+/* .row{
+    margin-right: -15px;
+    margin-left: -15px;
+  
+}
+.col-lg-2 {
+    
+    width: 16.66666667%;
+
+}
+.home-panel-bd {
+    height: 100px;
+    flex: 1;
+    margin: 0px 20px;
+    padding: 30px;
+    border-radius: 5px;
+    -webkit-box-shadow: 5px 5px 9px 5px #000000; 
+box-shadow: 0px 0px 15px -10px rgba(0,0,0,75);
+background-color:#4886FF;
+}
+.align-items-center {
+    align-items: center;
+}
+.panel-body {
+    padding: 15px;
+}
+.text-center {
+    text-align: center;
+}
+.text-white {
+    color: #801c1c!important;
+}
+ .statistic-box h2 {
+    margin: 0;
+    font-weight: 700;
+}
+.slight {
+    font-size: 13px;
+}
+.lifeord {
+    font-size: 15px;
+}  */

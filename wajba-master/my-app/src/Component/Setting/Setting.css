@@ -1,0 +1,67 @@
+Style for the form container
+/* div {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+   */
+  /* Style for the form heading */
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Style for form input fields and labels */
+  .settinglabel{
+    display: block;
+    text-align: left;
+    font-weight: bold;
+    margin-top: 10px;
+  } 
+   
+  .settinginput[type="text"],
+  .settinginput[type="email"],
+  .settinginput[type="password"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  } 
+  
+  /* Style for error messages */
+  .error {
+    color: red;
+    font-size: 14px;
+    text-align: left;
+    margin-top: 5px;
+  }
+  
+  /* Style for file input */
+  input[type="file"] {
+    margin-top: 10px;
+  }
+  
+  /* Style for the submit button */
+  button[type="submit"] {
+    background-color: #0c3f77;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #093461;
+  }
+  

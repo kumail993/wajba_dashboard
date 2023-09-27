@@ -1,0 +1,27 @@
+/* Admin.css */
+
+/* Style for the search bar */
+.search-bar {
+    margin-right: 16px; /* Adjust the margin as needed */
+    width: 90px; /* Adjust the width as needed */
+    height: 90px;
+  }
+  
+  /* Style for the "Add Supplier" button */
+  .add-supplier-button {
+    margin-bottom: 16px; /* Adjust the margin as needed */
+  }
+  
+  /* Style for the form fields in the "Add Supplier" form */
+  .add-supplier-form .MuiTextField-root {
+    margin-bottom: 16px; /* Adjust the margin as needed */
+  }
+  
+  /* Style for the error messages next to the form fields */
+  .error-message {
+    color: red;
+    font-size: 14px;
+  }
+  input[type="text"]{
+    height: 40px;
+  }

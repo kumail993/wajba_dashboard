@@ -1,0 +1,50 @@
+
+  
+  .form-group {
+    margin-bottom: 0px;
+    width: 100%;
+    max-width: 400px; /* Adjust the maximum width as needed */
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button[type="submit"] {
+    background-color: navy;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: darkblue;
+  }
+  
+  .error {
+    color: red;
+    font-size: 14px;
+  }
+  
+  .password-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .registration-heading{
+    position: relative;
+    top: 50%;
+    text-align: center;
+  }

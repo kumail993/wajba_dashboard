@@ -1,0 +1,87 @@
+/* OrderList.css */
+.order-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ddd; /* Add a border to the table */
+  }
+  
+  .order-table th,
+  .order-table td {
+    border: 1px solid #ddd; /* Add a border to table cells */
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .order-table th {
+    background-color: #f2f2f2; /* Gray background color for table headers */
+  }
+/* styles.css */
+
+/* styles.css */
+
+/* RestaurantApp.css */
+.restaurant-app {
+  text-align: center;
+  margin: 20px;
+}
+
+.menu-list {
+  list-style: none;
+  padding: 0;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 5px 0;
+}
+
+.add-button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.cart-list {
+  list-style: none;
+  padding: 0;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 5px 0;
+}
+
+.remove-button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.data-table th,
+.data-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+.data-table th {
+  background-color: #f2f2f2;
+}

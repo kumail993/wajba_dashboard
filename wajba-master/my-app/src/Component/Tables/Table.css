@@ -1,0 +1,230 @@
+/* .panel-bd>.panel-heading {
+    color: #252628;
+    background-color: #ffffff;
+    border-color: #e4e5e7;
+    position: relative;
+    border-radius: 1px solid black;
+}
+.panel-bd{
+    border: 1px solid #9eacc6;
+}
+.panel-heading {
+    padding: 10px 15px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+.panel-title {
+    display: inline;
+    font-weight: 700;
+    text-align: center;
+    font-weight: 800;
+   
+}
+.panel-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 16px;
+    color: inherit;
+}
+.row:before {
+    display: table;
+    content: " ";
+}
+.inbox-item {
+    border-bottom: 1px solid #f3f3f3;
+    overflow: hidden;
+    padding: 10px 0;
+    position: relative;
+}
+.inbox-item .inbox-item-customer-name {
+    margin: 0;
+    padding: 0;
+}
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+.inbox-item .inbox-item-text {
+    color: #9a9da0;
+    display: block;
+    font-size: 12px;
+    margin: 0;
+}
+.panel-body {
+    padding: 15px;
+}
+.slimScrollDiv{
+    position: relative;
+     overflow: hidden;
+      width: auto; 
+      height: 300px;
+      
+       
+}
+.message_inner1{
+    overflow: hidden;
+     width: auto;
+      height: 300px;
+}
+.slimScrollBar{
+    background: rgb(0, 0, 0);
+     width: 3px; position: absolute;
+      top: 0px; opacity: 0.4; 
+      display: block;
+       border-radius: 7px; 
+       z-index: 99; 
+       right: 1px; 
+       height: 82.1168px;
+}
+.slimScrollRail{
+    width: 3px; 
+    height: 100%;
+     position: absolute; 
+     top: 0px; 
+     display: none; 
+     border-radius: 7px; 
+     background: rgb(51, 51, 51); 
+     opacity: 0.2; 
+     z-index: 90;
+      right: 1px;
+} */
+.row {
+    margin-right: 15px;
+    margin-left: 15px;
+    margin-top: 15px;
+
+}
+.row:before {
+    display: table;
+    content: " ";
+}
+:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+* {
+    
+    box-sizing: border-box;
+}
+.col-md-4 {
+    width: 100.33333333%;
+    
+}
+div {
+    display: block;
+}
+.row:before {
+    display: table;
+    content: " ";
+}
+.col-md-4 {
+    float: left;
+}
+.col-md-4 .col-sm-12{
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.slimScrollDiv{
+    position: relative; 
+    overflow: hidden;
+     width: auto; 
+     height: 300px;
+}
+.message_inner1{
+    overflow: hidden; 
+    width: auto;
+     height: 300px;
+
+}
+.slimScrollBar{
+    background: rgb(0, 0, 0);
+     width: 3px;
+      position: absolute;
+       top: 0px; 
+       opacity: 0.4; 
+       display: block; 
+       border-radius: 7px; 
+       z-index: 99;
+        right: 1px; 
+        height: 82.1168px; 
+}
+.slimScrollRail{
+ width: 3px; 
+ height: 100%;
+ position: absolute; 
+ top: 0px;
+  display: none; 
+  border-radius: 7px;
+   background: rgb(51, 51, 51); 
+   opacity: 0.2; 
+   z-index: 90; 
+   right: 1px;
+
+}
+.panel-bd {
+    border: 1px solid #e1e6ef;
+}
+.panel {
+    box-shadow: none;
+}
+.panel {
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 4px;
+}
+
+.panel-heading {
+    padding: 10px 15px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+.panel-bd .panel-heading {
+    color: #eb6a1a;
+    background-color: #fff;
+    border-color: #e4e5e7;
+    position: relative;
+}
+.panel-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 16px;
+    color: inherit;
+}
+.panel-body {
+    padding: 15px;
+}
+.panel-body:before {
+    display: table;
+    content: " ";
+}
+:before {
+   
+    box-sizing: border-box;
+}
+.message_widgets {
+    margin-right: 10px;
+}
+.inbox-item {
+    border-bottom: 1px solid #f3f3f3;
+    overflow: hidden;
+    padding: 10px 0;
+    position: relative;
+}
+.inbox-item .inbox-item-customer-name {
+    margin: 0;
+    padding: 0;
+}
+.inbox-item .inbox-item-text {
+    color: #9a9da0;
+    display: block;
+    font-size: 12px;
+    margin: 0;
+}

@@ -1,0 +1,35 @@
+/* ProfilePage.css */
+
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  .avatar-container {
+    margin-bottom: 20px;
+  }
+  
+  .avatar {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .profile-details {
+    text-align: center;
+  }
+  
+  .profile-description {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .profile-item {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  /* Customize the styles as needed */
+  

@@ -1,0 +1,40 @@
+/* Footer.css */
+
+/* Style the footer container */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+  }
+  
+  /* Style the footer content */
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .footer-content p {
+    margin: 0;
+  }
+  
+  /* Style the navigation links in the footer */
+  .footer-content ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+  }
+  
+  .footer-content li {
+    margin-right: 20px;
+  }
+  
+  .footer-content a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .footer-content a:hover {
+    text-decoration: underline;
+  }
+  

@@ -1,0 +1,38 @@
+/* Add this CSS to your stylesheet or component */
+.order-details {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  /* Style the left column (restaurant information) */
+  .restaurant-info {
+    flex: 1;
+    margin-right: 20px; /* Adjust as needed for spacing between columns */
+  }
+  
+  /* Style the right column (invoice information) */
+  .invoice-info {
+    flex: 1;
+  }
+  
+  /* Style the headings */
+  h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  /* Style the strong elements (labels) */
+  strong {
+    font-weight: bold;
+  }
+  
+  /* Style the paragraphs */
+  p {
+    margin: 0;
+  }
+  
+  /* Add spacing between the rows */
+  .invoice-info div:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  

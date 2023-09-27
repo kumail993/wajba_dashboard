@@ -1,0 +1,59 @@
+.sidebar{
+    
+    height: auto;
+    background-color: rgb(38, 36, 36);
+    position: sticky;
+    top: 50px;
+}
+.sidebarwrapper{
+    padding-top: 40px;
+    color: rgb(255, 252, 252);
+}
+.sidebarmenu{
+    margin-bottom: 10px;
+}
+.sidebarTitle{
+    font-size: 30px;
+    color:lightgray;
+    padding: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;  
+    border-radius: 10px;
+}
+.sidebarTitle.active, .sidebarTitle:hover{
+    background-color: rgb(83, 83, 83);
+}
+
+.sidebarlist{
+    list-style: none;
+    padding:5px;
+
+}
+.sidebarlistitem{
+    padding: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;  
+    border-radius: 10px;
+}
+.sidebarlistitem.active, .sidebarlistitem:hover{
+    background-color: rgb(83, 83, 83);
+    
+}
+.dropdownItem{
+    padding: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;  
+    border-radius: 10px; 
+}
+.dropdownItem.active,.dropdownItem:hover{
+    background-color: rgb(83, 83, 83);
+}
+.avator{
+   padding-left: 135px;
+}
+.admindashboard{
+    text-align: center;
+}

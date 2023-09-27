@@ -1,0 +1,53 @@
+/* styles.css */
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Table Header */
+  table th {
+    background-color: #f2f2f2;
+    text-align: left;
+    padding: 8px;
+    border: 1px solid #dddddd;
+  }
+  
+  /* Table Rows */
+  table tr {
+    background-color: #ffffff;
+  }
+  
+  /* Table Cell (td) */
+  table td {
+    text-align: left;
+    padding: 8px;
+    border: 1px solid #dddddd;
+  }
+  
+  /* Alternate Row Color */
+  table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  /* Hover Effect */
+  table tr:hover {
+    background-color: #dddddd;
+  }
+  
+  /* Button Style */
+  .button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    background-color: #c82333;
+  }
+  

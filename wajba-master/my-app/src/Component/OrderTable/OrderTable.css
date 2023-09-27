@@ -1,0 +1,289 @@
+/* 
+.container-1{
+   padding-left: 40px;
+   padding-right: 40px;
+}
+
+.content-body .container-fluid{
+   padding-top: 30px;
+   padding-right: 30px;
+   padding-left: 30px;
+}
+.container-fluid{
+   width: 100%;
+}
+.fade:not(.show) {
+   opacity: 0;
+}
+.modal {
+   position: fixed;
+   top: 0;
+   left: 0;
+   z-index: 1050;
+   display: none;
+   width: 100%;
+   height: 100%;
+   overflow: hidden;
+   outline: 0;
+}
+.fade {
+   transition: opacity 0.15s linear;
+}
+.modal.fade .modal-dialog {
+   transition: transform 0.3s ease-out;
+   transform: translate(0, -50px);
+}
+@media (min-width: 576px){
+.modal-dialog {
+   max-width: 500px;
+   margin: 1.75rem auto;
+}
+}
+.modal-dialog {
+   position: relative;
+   width: auto;
+   pointer-events: none;
+}
+.modal-content {
+   border-radius: 1.25rem;
+}
+.modal-content {
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   pointer-events: auto;
+   background-color: #fff;
+   background-clip: padding-box;
+   border: 1px solid rgba(0, 0, 0, 0.2);
+   border-radius: 0.3rem;
+   outline: 0;
+}
+.modal-header {
+   padding: 1rem 1.875rem;
+}
+.modal-header {
+   display: flex;
+   align-items: flex-start;
+   justify-content: space-between;
+   border-bottom: 1px solid #EEEEEE;
+   border-top-left-radius: calc(0.3rem - 1px);
+   border-top-right-radius: calc(0.3rem - 1px);
+}
+.modal-title {
+   margin-bottom: 0;
+   line-height: 1.5;
+}
+h5{
+   font-size: 1rem;
+    font-weight: 500;
+    color: #3d4465;
+}
+.modal-header .close {
+   padding: 0.875rem 1.815rem;
+   margin: 0;
+   position: absolute;
+   right: 0;
+   float: none;
+   top: 0;
+   font-size: 30px;
+   font-weight: 100;
+}
+button.close {
+   background-color: transparent;
+   border: 0;
+}
+/* OrderList.css */
+/* .order-table {
+   width: 100%;
+   border-collapse: collapse;
+   border: 1px solid #ddd; /* Add a border to the table 
+ }
+ 
+ .order-table th,
+ .order-table td {
+   border: 1px solid #ddd; /* Add a border to table cells 
+   padding: 8px;
+   text-align: left;
+ }
+ 
+ .order-table th {
+   background-color: #f2f2f2; /* Gray background color for table headers 
+ }
+   */
+   /* Add this CSS to your stylesheet */
+/* .order-list {
+   font-family: Arial, sans-serif;
+   margin: 20px;
+   padding: 20px;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   background-color: #fff;
+ }
+ 
+ .order-list input[type="text"] {
+   width: 100%;
+   padding: 10px;
+   margin-bottom: 20px;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+   font-size: 16px;
+ }
+ 
+ .order-table {
+   width: 100%;
+   border-collapse: collapse;
+ }
+ 
+ .order-table th,
+ .order-table td {
+   padding: 10px;
+   text-align: left;
+   border-bottom: 1px solid #ccc;
+ }
+ 
+ .order-table th {
+   background-color: #f2f2f2;
+ }
+ 
+ .order-table tbody tr:nth-child(even) {
+   background-color: #f2f2f2;
+ }
+ 
+ .order-table tbody tr:hover {
+   background-color: #ddd;
+ }
+ 
+ .order-table th,
+ .order-table td {
+   width: 12.5%;
+ }
+ 
+ .order-table th:last-child,
+ .order-table td:last-child {
+   width: 10%;
+ }
+ 
+ .order-table th:first-child,
+ .order-table td:first-child {
+   width: 5%;
+ }
+ 
+ button {
+   background-color: #007bff;
+   color: #fff;
+   border: none;
+   padding: 5px 10px;
+   border-radius: 5px;
+   cursor: pointer;
+   font-size: 14px;
+   margin-right: 5px;
+   padding-bottom: 10px;
+ }
+ 
+ button:hover {
+   background-color: #0056b3;
+ }
+ 
+ /* Optionally, you can style the FontAwesome icons 
+ button .fa-eye {
+   margin-right: 5px;
+  padding-bottom: 10px;
+ }
+ 
+ button .fa-file-invoice {
+   margin-right: 5px;
+ }
+  */
+
+
+  /* CSS */
+.order-list {
+   font-family: Arial, sans-serif;
+   margin: 20px;
+   padding: 20px;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   background-color: #fff;
+ }
+ 
+ .order-list input[type="text"] {
+   width: 100%;
+   padding: 10px;
+   margin-bottom: 20px;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+   font-size: 16px;
+ }
+ 
+ .order-table {
+   width: 100%;
+   border-collapse: collapse;
+ }
+ 
+ .order-table th,
+ .order-table td {
+   padding: 10px;
+   text-align: left;
+   border-bottom: 1px solid #ccc;
+ }
+ 
+ .order-table th {
+   background-color: #f2f2f2;
+ }
+ 
+ .order-table tbody tr:nth-child(even) {
+   background-color: #f2f2f2;
+ }
+ 
+ .order-table tbody tr:hover {
+   background-color: #ddd;
+ }
+ 
+ .order-table th,
+ .order-table td {
+   width: 12.5%;
+ }
+ 
+ .order-table th:last-child,
+ .order-table td:last-child {
+   width: 10%;
+ }
+ 
+ .order-table th:first-child,
+ .order-table td:first-child {
+   width: 5%;
+ }
+ 
+ /* Updated Button Styles */
+ .button-container {
+   display: flex;
+   gap: 10px;
+ }
+ 
+ .button-container button {
+   background-color: #007bff;
+   color: #fff;
+   border: none;
+   padding: 10px 20px;
+   border-radius: 5px;
+   cursor: pointer;
+   font-size: 14px;
+   transition: background-color 0.3s ease;
+ }
+ 
+ .button-container button:hover {
+   background-color: #0056b3;
+ }
+ 
+ /* Optionally, you can style the FontAwesome icons */
+ .button-container button .fa-eye {
+   margin-right: 5px;
+ }
+ 
+ .button-container button .fa-file-invoice {
+   margin-right: 5px;
+ }
+ 
