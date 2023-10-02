@@ -8,7 +8,7 @@ const app = express();
 //require('dotenv').config();
 
 router.route('/registration').post(async (req, res, next) => {
-
+  
     try {
         const {crew_user, restaurant_name, crew_email, crew_password } = req.body;
         console.log(req.body);
@@ -86,5 +86,5 @@ module.exports = router;
 
 // });
 
-module.exports = router;
+// module.exports = router;
 

@@ -17,10 +17,6 @@ export default function Registration() {
     userName: '',
     email: '',
     password: '',
-    restaurantAddress: '',
-    openingHours: '', // Add opening hours field
-    closingHours: '', // Add closing hours field
-    restaurantImage: null,
   });
 
   const [showPassword, setShowPassword] = useState(false);
@@ -29,29 +25,14 @@ export default function Registration() {
     userName: '',
     email: '',
     password: '',
-    restaurantAddress: '',
-    openingHours: '', // Add opening hours field
-    closingHours: '', // Add closing hours field
-    restaurantImage: '',
   });
 
-  const handleChange = (e) => {
-    const { name, value, files } = e.target;
-
-    if (name === 'restaurantImage' && files) {
-      const imageFile = files[0];
-
-      if (imageFile && !imageFile.type.startsWith('image/')) {
-        setErrors({ ...errors, restaurantImage: 'Please select a valid image file' });
-      } else if (imageFile && imageFile.size > 1024 * 1024) {
-        setErrors({ ...errors, restaurantImage: 'Image size should be less than 1MB' });
-      } else {
-        setFormData({ ...formData, [name]: imageFile });
-        setErrors({ ...errors, restaurantImage: '' });
-      }
-    } else {
-      setFormData({ ...formData, [name]: value });
-    }
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
   };
 
   const togglePasswordVisibility = () => {
@@ -85,22 +66,6 @@ export default function Registration() {
       newErrors.password = 'Password cannot be the same as email';
     }
 
-    if (!formData.restaurantAddress.trim()) {
-      newErrors.restaurantAddress = 'Restaurant address is required';
-    }
-
-    if (!formData.openingHours.trim()) {
-      newErrors.openingHours = 'Opening hours are required';
-    }
-
-    if (!formData.closingHours.trim()) {
-      newErrors.closingHours = 'Closing hours are required';
-    }
-
-    if (!formData.restaurantImage) {
-      newErrors.restaurantImage = 'Restaurant image is required';
-    }
-
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
@@ -111,156 +76,155 @@ export default function Registration() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-  
+
+    // Validate the form
     if (validateForm()) {
       try {
-        // Hash the password on the client-side
-        const hashedPassword = await hashPassword(formData.password);
-  
         // Prepare the data to send to the backend
         const registrationData = {
-          crew_user: formData.userName,
-          restaurant_name: formData.restaurantName,
-          crew_email: formData.email,
-          crew_password: hashedPassword,
+          restaurantName: formData.restaurantName,
+          userName: formData.userName,
+          email: formData.email,
+          password: formData.password,
         };
-  
+
         // Make a POST request to your backend registration API
-        const response = await axios.post('/registration', registrationData);
-  
-        if (response.status === 201) {
-          console.log('Registration successful');
-          // navigate('/registrationverification'); // Redirect to verification page on success
-        } else if (response.status === 409) {
-          console.error('Email already exists:', response.data.error);
-        } else {
-          console.error('Registration failed:', response.data.error);
-        }
+        axios
+          .post('http://192.168.130.68:3000/Api/registration', registrationData)
+          .then((res) => {
+            navigate('/');
+            console.log(res);
+            // Handle success here
+            // You can navigate to another page or show a success message
+          })
+          .catch((err) => {
+            console.log(err);
+            // Handle error here
+            // You can display an error message to the user
+          });
       } catch (error) {
         console.error('Registration error:', error);
       }
     }
   };
-  
-
-  const hashPassword = async (password) => {
-    // Use a password hashing library (e.g., bcrypt) on the server-side
-    // You should not hash passwords on the client-side in a real application
-    // This is just for demonstration purposes
-    // NEVER hash passwords on the client-side in a real application
-    return password; // Replace with actual hashing logic on the server
-  };
 
   return (
     <div
-    style={{
-      backgroundImage: `url(${bgimg})`,
-      backgroundSize: 'cover',
-      backgroundPosition: 'center',
-      backgroundRepeat: 'no-repeat',
-      height: '100vh',
-      opacity: 1.0,
-    }}
-  >
-    <Box
-      sx={{
-        width: '75%',
-        height: '70%',
-        backgroundColor: 'background.paper',
-        position: 'absolute',
-        top: '10%',
-        left: '10%',
+      style={{
+        backgroundImage: `url(${bgimg})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        height: '100vh',
+        opacity: 1.0,
       }}
     >
-      <Grid container>
-        <Grid item xs={12} sm={12} lg={6}>
-          <Box
-            style={{
-              backgroundImage: `url(${bg})`,
-              backgroundSize: 'cover',
-              marginTop: '40px',
-              marginLeft: '15px',
-              marginRight: '15px',
-              height: '60vh',
-              width: '73vh',
-            }}
-          ></Box>
-        </Grid>
-        <Grid item xs={12} sm={12} lg={6}>
-          <Box
-            style={{
-              backgroundSize: 'cover',
-              height: '70vh',
-              backgroundColor: 'navy blue',
-            }}
-          >
-            <Container>
-              <Box
-                sx={{
-                  position: 'relative',
-                  top: '50%',
-                  textAlign: 'center',
-                }}
-              >
-                <h1>Registration</h1>
-              </Box>
-              <Grid container spacing={1}>
-                <Grid item xs={12} sx={{ ml: "3em", mr: "3em" }}>
-                  <form onSubmit={handleSubmit}>
-                    <div className="form-group">
-                      <label>Restaurant Name</label>
-                      <input
-                        type="text"
-                        name="restaurantName"
-                        value={formData.restaurantName}
-                        onChange={handleChange}
-                      />
-                      {errors.restaurantName && <p className="error">{errors.restaurantName}</p>}
-                    </div>
-                    <div className="form-group">
-                      <label>User Name</label>
-                      <input
-                        type="text"
-                        name="userName"
-                        value={formData.userName}
-                        onChange={handleChange}
-                      />
-                      {errors.userName && <p className="error">{errors.userName}</p>}
-                    </div>
-                    <div className="form-group">
-                      <label>Email</label>
-                      <input
-                        type="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                      />
-                      {errors.email && <p className="error">{errors.email}</p>}
-                    </div>
-                    <div className="form-group">
-                      <label>Password</label>
-                      <div className="password-input">
+      <Box
+        sx={{
+          width: '75%',
+          height: '70%',
+          backgroundColor: 'background.paper',
+          position: 'absolute',
+          top: '10%',
+          left: '10%',
+        }}
+      >
+        <Grid container>
+          <Grid item xs={12} sm={12} lg={6}>
+            <Box
+              style={{
+                backgroundImage: `url(${bg})`,
+                backgroundSize: 'cover',
+                marginTop: '40px',
+                marginLeft: '15px',
+                marginRight: '15px',
+                height: '60vh',
+                width: '73vh',
+              }}
+            ></Box>
+          </Grid>
+          <Grid item xs={12} sm={12} lg={6}>
+            <Box
+              style={{
+                backgroundSize: 'cover',
+                height: '70vh',
+                backgroundColor: 'navy blue',
+              }}
+            >
+              <Container>
+                <Box
+                  sx={{
+                    position: 'relative',
+                    top: '50%',
+                    textAlign: 'center',
+                  }}
+                >
+                  <h1>Registration</h1>
+                </Box>
+                <Grid container spacing={1}>
+                  <Grid item xs={12} sx={{ ml: '3em', mr: '3em' }}>
+                    <form onSubmit={handleSubmit}>
+                      <div className="form-group">
+                        <label>Restaurant Name</label>
                         <input
-                          type={showPassword ? 'text' : 'password'}
-                          name="password"
-                          value={formData.password}
+                          type="text"
+                          name="restaurantName"
+                          value={formData.restaurantName}
                           onChange={handleChange}
-                          onClick={togglePasswordVisibility}
-                          autoComplete="new-password"
                         />
+                        {errors.restaurantName && (
+                          <p className="error">{errors.restaurantName}</p>
+                        )}
                       </div>
-                      {errors.password && <p className="error">{errors.password}</p>}
-                    </div>
-                    <button type="submit"  >Register</button>
-                  </form>
+                      <div className="form-group">
+                        <label>User Name</label>
+                        <input
+                          type="text"
+                          name="userName"
+                          value={formData.userName}
+                          onChange={handleChange}
+                        />
+                        {errors.userName && (
+                          <p className="error">{errors.userName}</p>
+                        )}
+                      </div>
+                      <div className="form-group">
+                        <label>Email</label>
+                        <input
+                          type="email"
+                          name="email"
+                          value={formData.email}
+                          onChange={handleChange}
+                        />
+                        {errors.email && (
+                          <p className="error">{errors.email}</p>
+                        )}
+                      </div>
+                      <div className="form-group">
+                        <label>Password</label>
+                        <div className="password-input">
+                          <input
+                            type={showPassword ? 'text' : 'password'}
+                            name="password"
+                            value={formData.password}
+                            onChange={handleChange}
+                            onClick={togglePasswordVisibility}
+                            autoComplete="new-password"
+                          />
+                        </div>
+                        {errors.password && (
+                          <p className="error">{errors.password}</p>
+                        )}
+                      </div>
+                      <button type="submit">Register</button>
+                    </form>
+                  </Grid>
                 </Grid>
-              </Grid>
-            </Container>
-          </Box>
+              </Container>
+            </Box>
+          </Grid>
         </Grid>
-      </Grid>
-    </Box>
-  </div>
+      </Box>
+    </div>
   );
 }
-

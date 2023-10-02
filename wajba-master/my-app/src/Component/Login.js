@@ -49,21 +49,21 @@ export default function Login() {
         setErrors(newErrors);
         setErrors(newErrors);
 
-  if (Object.keys(newErrors).length === 0) {
-    // No validation errors, send a POST request to the backend
-    try {
-      const response = await axios.post('http://localhost:8081/login', formData);
+//   if (Object.keys(newErrors).length === 0) {
+//     // No validation errors, send a POST request to the backend
+//     try {
+//       const response = await axios.post('http://localhost:8081/login', formData);
 
-      if (response.data.success) {
-        console.log('Login successful');
-        navigate('/admin'); // Redirect to the admin page on success
-      } else {
-        alert(response.data.message);
-      }
-    } catch (error) {
-      console.error('Login error:', error);
-    }
-  }
+//       if (response.data.success) {
+//         console.log('Login successful');
+//         // navigate('/admin'); // Redirect to the admin page on success
+//       } else {
+//         alert(response.data.message);
+//       }
+//     } catch (error) {
+//       console.error('Login error:', error);
+//     }
+//   }
     };
     
 
@@ -188,6 +188,8 @@ export default function Login() {
                                                             backgroundColor: 'black',
                                                         },
                                                     }}
+                                                    onClick={() =>
+                                                        navigate('/admin')}
                                                 >
                                                     Login
                                                 </Button>
